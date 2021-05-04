@@ -10,6 +10,103 @@
         <link href="https://pagecdn.io/lib/tailwindcss/1.6.2/base.css" rel="stylesheet" crossorigin="anonymous"  >
         <script src="https://kit.fontawesome.com/1c07a89df0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+        <script>
+        // Initialize and add the map
+            function initMap() {
+                // The location of Winona
+                const Winona = { lat: 44.046948, lng: -91.647033 };
+                // The map, centered at Winona
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 12,
+                    center: Winona,
+                    styles: [
+                    { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+                    { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+                    { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+                    {
+                        featureType: "administrative.locality",
+                        elementType: "labels.text.fill",
+                        stylers: [{ color: "#d59563" }],
+                    },
+                    {
+                        featureType: "poi",
+                        elementType: "labels.text.fill",
+                        stylers: [{ color: "#d59563" }],
+                    },
+                    {
+                        featureType: "poi.park",
+                        elementType: "geometry",
+                        stylers: [{ color: "#263c3f" }],
+                    },
+                    {
+                        featureType: "poi.park",
+                        elementType: "labels.text.fill",
+                        stylers: [{ color: "#6b9a76" }],
+                    },
+                    {
+                        featureType: "road",
+                        elementType: "geometry",
+                        stylers: [{ color: "#38414e" }],
+                    },
+                    {
+                        featureType: "road",
+                        elementType: "geometry.stroke",
+                        stylers: [{ color: "#212a37" }],
+                    },
+                    {
+                        featureType: "road",
+                        elementType: "labels.text.fill",
+                        stylers: [{ color: "#9ca5b3" }],
+                    },
+                    {
+                        featureType: "road.highway",
+                        elementType: "geometry",
+                        stylers: [{ color: "#746855" }],
+                    },
+                    {
+                        featureType: "road.highway",
+                        elementType: "geometry.stroke",
+                        stylers: [{ color: "#1f2835" }],
+                    },
+                    {
+                        featureType: "road.highway",
+                        elementType: "labels.text.fill",
+                        stylers: [{ color: "#f3d19c" }],
+                    },
+                    {
+                        featureType: "transit",
+                        elementType: "geometry",
+                        stylers: [{ color: "#2f3948" }],
+                    },
+                    {
+                        featureType: "transit.station",
+                        elementType: "labels.text.fill",
+                        stylers: [{ color: "#d59563" }],
+                    },
+                    {
+                        featureType: "water",
+                        elementType: "geometry",
+                        stylers: [{ color: "#17263c" }],
+                    },
+                    {
+                        featureType: "water",
+                        elementType: "labels.text.fill",
+                        stylers: [{ color: "#515c6d" }],
+                    },
+                    {
+                        featureType: "water",
+                        elementType: "labels.text.stroke",
+                        stylers: [{ color: "#17263c" }],
+                    },
+                    ]
+                });
+                // The marker, positioned at Winona
+                const marker = new google.maps.Marker({
+                    position: Winona,
+                    map: map,
+                });
+            }
+        </script>
     </HEAD>
     <BODY>
         <nav class="fixed left-0 right-0 top-0 text-gray-100 bg-gray-900 shadow-lg z-50 flex justify-between h-12 px-4">
@@ -96,23 +193,93 @@
 
 </section>
         <section id="about" class="full-h full-w bg-gray-900 text-gray-100 relative">
-            <div class="header text-3xl pt-12 px-4">About</div>
-            <div class="about">
-                <div class="profileul">
-                    <div class="h-64 w-64 profile mt-4 ml-4" style="background-image: url('assets/img/profile.jpg');"></div>
-                    <div class="profile text-center">Rahul Holani</div>
+            <!-- <div class="header text-3xl pt-12 px-4">About</div> -->
+            <div class="about pt-12">
+                <div class="profileul w-64 mt-4 ml-4">
+                    <div class="h-64 profile circle" style="background-image: url('assets/img/profile.jpg');"></div>
+                    <div class="profile mt-2 text-xl text-center">Rahul Holani</div>
+                    <hr>
+                    <div id="map" class="h-64"></div>
+                </ul>
+            </div>
+             <div style="right: 60px;" class="w-48 absolute h-full top-0 pt-12 text-3xl" id="navbarSupportedContent">
+                <ul class="navbar-nav h-full">
+                    <li class="my-2">
+                        <div class="relative pt-3">
+                            <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                                <div style="width:95%;" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                            </div>
+                        </div>
+                    </li>   
+                    <!-- <i class="fab fa-node"></i> -->
+                    <li class="mb-2 pt-3">
+                        <div class="relative pt-1">
+                            <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                                <div style="width:85%;" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                            </div>
+                        </div>
+                    </li>  
+                    <li class="mb-2 pt-4">
+                        <div class="relative">
+                            <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                                <div style="width:90%;" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                            </div>
+                        </div>
+                    </li>  
+                    <li class="mb-2 pt-2">
+                        <div class="relative">
+                            <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                                <div style="width:85%;" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                            </div>
+                        </div>
+                    </li>  
+                    <li class="mb-2 pt-2">
+                        <div class="relative">
+                            <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                                <div style="width:100%;" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                            </div>
+                        </div>
+                    </li>  
+                    <li class="mb-2 pt-2">
+                        <div class="relative">
+                            <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                                <div style="width:100%;" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                            </div>
+                        </div>
+                    </li>  
+                    <li class="mb-2 pt-2">
+                        <div class="relative">
+                            <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                                <div style="width:80%;" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                            </div>
+                        </div>
+                    </li>  
+                    <li class="mb-2 pt-2">
+                        <div class="relative">
+                            <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                                <div style="width:70%;" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                            </div>
+                        </div>
+                    </li>  
+                    <li class="mb-16 pt-2">
+                        <div class="relative">
+                            <div class="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                                <div style="width:75%;" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                            </div>
+                        </div>
+                    </li>   
                 </ul>
             </div>
             <div class="right-0 w-12 absolute h-full top-0 pt-12 text-3xl" id="navbarSupportedContent">
                 <ul class="navbar-nav h-full">
-                    <li class="mb-2">
+                    <li class="my-2">
                         <i class="fab fa-node-js"></i>
                     </li>   
                     <!-- <i class="fab fa-node"></i> -->
-                    <li> 
+                    <li class="mb-2"> 
                         <i class="fab fa-css3-alt"></i>
                     </li> 
-                     <li> 
+                     <li class="mb-2"> 
                        <i class="fab fa-sass"></i>
                     </li> 
                     <li class="mb-2">
@@ -137,7 +304,6 @@
             </div>
 
             <div class="absolute bottom-0 h-16 w-full bg-gray-100 text-gray-900" style="border-radius: 50% 50% 0 0;">
-                <!-- <div class="text-center text-md mb-2">Contact me</div> -->
                 <div class="text-center flex justify-around text-3xl mt-4 mx-auto w-1/2">
                     <a href="tel://+19282650819"><i class="fas fa-phone-alt"></i></a>
                     <a href="sms://+19282650819"><i class="fas fa-comment-alt"></i></a>
@@ -149,6 +315,10 @@
             </div>
         </section>
         <script src="js/scripts.js"></script>
+         <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQGW4A-S_n9uJf4TA0rUatTnIzYdbv2bM&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
     </BODY>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script>

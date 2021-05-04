@@ -78,8 +78,8 @@ li {
 .profile {
     background-repeat: no-repeat; 
     background-size: cover; 
-    border-radius: 50%;
 }
+.circle {border-radius: 50%;}
 .portfolio-item-text {
     height: 5.5rem;
     transition: 0.3s;
