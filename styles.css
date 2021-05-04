@@ -21,11 +21,17 @@
 .bg-gray-900 {
     background-color: rgba(37, 37, 37, 1);
 }
+.text-gray-900 {
+    color: rgba(37, 37, 37, 1);
+}
 .bg-gray-600 {
     background-color: rgba(37, 37, 37, 0.6);
 }
 .text-gray-100 {
     color: rgba(224 224 224, 1);
+}
+.bg-gray-100 {
+    background-color: rgba(228, 228, 228, 1);
 }
 .full-h {
     height: 100vh;
@@ -94,10 +100,9 @@ li {
 button[type="submit"] {
     outline: none;
 }
-
+/* 
 .profileul {
     list-style: none;
-    float: right;
     margin: 0;
 }
 
@@ -108,4 +113,23 @@ button[type="submit"] {
     vertical-align: middle;
     text-align: center;
     margin: 0;
+} */
+
+
+.navbar,
+.navbar-collapse {
+  flex-direction: column;
+}
+
+.navbar-nav {
+    display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.navbar-nav li {
+    flex: 1;
+  width: 100%
+}
+.navbar-expand-lg .navbar-nav {
+  flex-direction: column;
 }
