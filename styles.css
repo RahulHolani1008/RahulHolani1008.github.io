@@ -78,7 +78,7 @@ li {
     transition: 0.3s;
 }
 .portfolio-item-text:hover {
-    height: 14rem;
+    height: 8rem;
 }
 .description {
     display: none;
