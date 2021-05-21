@@ -74,11 +74,11 @@ li {
 }
 .circle {border-radius: 50%;}
 .portfolio-item-text {
-    height: 5.5rem;
+    height: 8.5rem;
     transition: 0.3s;
 }
 .portfolio-item-text:hover {
-    height: 8rem;
+    height: 10.5rem;
 }
 .description {
     display: none;
