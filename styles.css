@@ -126,3 +126,10 @@ button[type="submit"] {
 .navbar-expand-lg .navbar-nav {
   flex-direction: column;
 }
+
+@media only screen and (max-width: 1344px) {
+    .hide-small {
+      visibility: none;
+      display: none;
+    }
+  }
