@@ -129,7 +129,7 @@ button[type="submit"] {
 
 @media only screen and (max-width: 1344px) {
     .hide-small {
-      visibility: none;
-      display: none;
+      visibility: none !important;
+      display: none !important;
     }
   }
