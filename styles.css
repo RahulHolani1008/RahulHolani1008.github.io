@@ -11,6 +11,9 @@
 .text-9xl {
     font-size: 4.97rem;
 }
+.overflow-scroll {
+ overflow-x: scroll;
+}
 .bg-gray-900 {
     background-color: rgba(37, 37, 37, 1);
 }
