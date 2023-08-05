@@ -1,6 +1,6 @@
 let i = 0;
 let j = 0;
-const txt = ["a Developer.","a Humanitarian.","an Enthusiast","a Designer.","an Environmentalist.","an Ally." ];
+const txt = ["a Developer.","a Humanitarian.","an Enthusiast.","a Designer.","an Environmentalist.","an Ally." ];
 const speed = 120;
 typeWriter = () => {
   if (i < txt[j].length) {
