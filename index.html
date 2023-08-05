@@ -8,11 +8,11 @@
         // Initialize and add the map
             function initMap() {
                 // The location of Saint Louis Park
-                const StLouisPark = { lat: 44.969042, lng: -93.361541 };
+                const Minneapolis = { lat: 44.969042, lng: -93.361541 };
                 // The map, centered at Winona
                 const map = new google.maps.Map(document.getElementById("map"), {
                     zoom: 10,
-                    center: Saint Louis Park,
+                    center: Minneapolis,
                     styles: [
                     { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
                     { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
@@ -96,7 +96,7 @@
                 });
                 // The marker, positioned at Winona
                 const marker = new google.maps.Marker({
-                    position: StLouisPark,
+                    position: Minneapolis,
                     map: map,
                 });
             }
